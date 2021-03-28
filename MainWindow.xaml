@@ -19,21 +19,9 @@
         </Style>
     </Window.Resources>
 
-    <Grid>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="100" />
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
+    <Grid
+        local:GridDef.Columns="*,*,*"
+        local:GridDef.Rows="*,*,Auto,100">
         <Rectangle Fill="HotPink" />
         <TextBlock Text="0" />
 
