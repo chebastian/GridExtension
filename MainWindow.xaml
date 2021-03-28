@@ -9,20 +9,19 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <Grid
-        local:GridDef.Columns="Auto,2*,*"
-        local:GridDef.Rows="*,*,Auto,30">
-        <TextBlock Text="First" />
-        <TextBlock
+    <Grid local:GridDef.Rows="*,2*,Auto,30">
+
+        <Rectangle Fill="HotPink" />
+        <Rectangle
             Grid.Row="1"
-            Text="Second" />
-        <TextBlock
+            Fill="Purple" />
+        <Rectangle
             Grid.Row="2"
             Grid.Column="1"
-            Text="Third" />
-        <TextBlock
+            Height="10"
+            Fill="Pink" />
+        <Rectangle
             Grid.Row="3"
-            Grid.Column="2"
-            Text="4th" />
+            Fill="MediumPurple" />
     </Grid>
 </Window>
