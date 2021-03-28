@@ -21,17 +21,36 @@
 
     <Grid
         local:GridDef.Columns="*,*,*"
-        local:GridDef.Rows="*,*,Auto,100">
+        local:GridDef.Rows="*, *, Auto, 100">
+
         <Rectangle Fill="HotPink" />
         <TextBlock Text="0" />
 
-        <Rectangle Grid.Row="1" Grid.Column="1" Fill="Purple" />
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="1" />
+        <Rectangle
+            Grid.Row="1"
+            Grid.Column="1"
+            Fill="Purple" />
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="1" />
 
-        <Rectangle Grid.Row="2" Grid.Column="2" Fill="Pink" />
-        <TextBlock Grid.Row="2" Grid.Column="2" Text="2" />
+        <Rectangle
+            Grid.Row="2"
+            Grid.Column="2"
+            Fill="Pink" />
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="2"
+            Text="2" />
 
-        <Rectangle Grid.Row="3" Grid.Column="3" Fill="MediumPurple" />
-        <TextBlock Grid.Row="3" Grid.Column="3" Text="3" />
+        <Rectangle
+            Grid.Row="3"
+            Grid.Column="3"
+            Fill="MediumPurple" />
+        <TextBlock
+            Grid.Row="3"
+            Grid.Column="3"
+            Text="3" />
     </Grid>
 </Window>
