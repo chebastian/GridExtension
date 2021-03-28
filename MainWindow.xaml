@@ -9,19 +9,29 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <Grid local:GridDef.Rows="*,2*,Auto,30">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+    </Window.Resources>
 
+    <Grid
+        local:GridDef.Columns="*,*,*"
+        local:GridDef.Rows="*,*,Auto,100">
         <Rectangle Fill="HotPink" />
-        <Rectangle
-            Grid.Row="1"
-            Fill="Purple" />
-        <Rectangle
-            Grid.Row="2"
-            Grid.Column="1"
-            Height="10"
-            Fill="Pink" />
-        <Rectangle
-            Grid.Row="3"
-            Fill="MediumPurple" />
+        <TextBlock Text="0" />
+
+        <Rectangle Grid.Row="1" Grid.Column="1" Fill="Purple" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="1" />
+
+        <Rectangle Grid.Row="2" Grid.Column="2" Fill="Pink" />
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="2" />
+
+        <Rectangle Grid.Row="3" Grid.Column="3" Fill="MediumPurple" />
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="3" />
     </Grid>
 </Window>
