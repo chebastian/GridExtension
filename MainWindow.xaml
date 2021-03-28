@@ -10,8 +10,8 @@
     Height="450"
     mc:Ignorable="d">
     <Grid
-        local:GridRows.Columns="*,Auto,*"
-        local:GridRows.Rows="*,*,Auto,30">
+        local:GridDef.Columns="Auto,2*,*"
+        local:GridDef.Rows="*,*,Auto,30">
         <TextBlock Text="First" />
         <TextBlock
             Grid.Row="1"
