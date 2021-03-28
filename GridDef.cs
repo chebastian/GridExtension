@@ -10,8 +10,6 @@ namespace GridExtension
 {
     public class GridDef
     {
-
-
         public static string GetRows(DependencyObject obj)
         {
             return (string)obj.GetValue(RowsProperty);
