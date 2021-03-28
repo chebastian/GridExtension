@@ -8,7 +8,7 @@ Create all your rows in a single string attribute, add and remove rows to your h
 Before:  
 ![image](https://user-images.githubusercontent.com/1180191/112758972-43a96f80-8ff1-11eb-98e3-a6183eecb99c.png)  
 After:  
-![image](https://user-images.githubusercontent.com/1180191/112758737-2a53f380-8ff0-11eb-918b-f49fafdb9c86.png)
+![image](https://user-images.githubusercontent.com/1180191/112759041-8c612880-8ff1-11eb-885a-c0a0ff0d79b6.png)  
 
 
 # Columns:
