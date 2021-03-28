@@ -9,24 +9,20 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <Grid local:GridRows.Rows="*,*,Auto">
+    <Grid
+        local:GridRows.Columns="*,Auto,*"
+        local:GridRows.Rows="*,*,Auto,30">
         <TextBlock Text="First" />
         <TextBlock
             Grid.Row="1"
             Text="Second" />
         <TextBlock
             Grid.Row="2"
+            Grid.Column="1"
             Text="Third" />
         <TextBlock
             Grid.Row="3"
-            Text="Fourth" />
-
-        <TextBlock
-            Grid.Row="4"
-            Text="Fifth" />
-
-        <TextBlock
-            Grid.Row="5"
-            Text="6" />
+            Grid.Column="2"
+            Text="4th" />
     </Grid>
 </Window>

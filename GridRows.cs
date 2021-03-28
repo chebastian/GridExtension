@@ -28,6 +28,43 @@ namespace GridExtension
         private static bool loaded;
         private static string setOnInit;
 
+
+
+        public static string GetColumns(DependencyObject obj)
+        {
+            return (string)obj.GetValue(ColumnsProperty);
+        }
+
+        public static void SetColumns(DependencyObject obj, string value)
+        {
+            obj.SetValue(ColumnsProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for Columns.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ColumnsProperty =
+            DependencyProperty.RegisterAttached("Columns", typeof(string), typeof(GridRows), new PropertyMetadata("",OnColChanged));
+
+        private static void OnColChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is Grid grid)
+            {
+                grid.ColumnDefinitions.Clear();
+                if (e.NewValue is String args)
+                {
+                    var definitions = args.Split(",");
+                    var converter = new GridLengthConverter();
+
+                    var colDefinitions = definitions.Select(row => new ColumnDefinition()
+                    {
+                        Width = (GridLength)converter.ConvertFromString(row)
+                    });
+
+                    foreach (var def in colDefinitions)
+                        grid.ColumnDefinitions.Add(def);
+                }
+            }
+        }
+
         private static void OnChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (d is Grid grid)
