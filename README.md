@@ -10,6 +10,10 @@ Before:
 After:  
 ![image](https://user-images.githubusercontent.com/1180191/112759041-8c612880-8ff1-11eb-885a-c0a0ff0d79b6.png)  
 
+# Columns:
+Works the exact same way
+![image](https://user-images.githubusercontent.com/1180191/112761595-478ebf00-8ffc-11eb-9c82-c1694a3afe25.png)  
+
 
 # Columns:
 Same for columns:
