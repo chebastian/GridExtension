@@ -1,7 +1,7 @@
 # GridExtension
-Tired of writing The same old row or column definitions in your wpf apps?
-Been looking at Xamarin and seen their lovely row and column definitions and now you need it in wpf?
-Your welcome!
+Tired of writing The same old row or column definitions in your wpf apps?  
+Been looking at Xamarin and seen their lovely row and column definitions and now you need it in wpf?  
+You need GridExtensions, your welcome!
 
 # Rows:
 Create all your rows in a single string attribute, add and remove rows to your hears content using Rows:  
