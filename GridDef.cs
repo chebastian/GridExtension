@@ -25,9 +25,6 @@ namespace GridExtension
         // Using a DependencyProperty as the backing store for Rows.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty RowsProperty =
             DependencyProperty.RegisterAttached("Rows", typeof(string), typeof(GridDef), new PropertyMetadata("", OnChanged));
-        private static bool loaded;
-        private static string setOnInit;
-
 
 
         public static string GetColumns(DependencyObject obj)
@@ -74,26 +71,6 @@ namespace GridExtension
                 {
                     var definitions = args.Split(",");
                     var converter = new GridLengthConverter();
-                    if (definitions.Length == 1)
-                    {
-                        if (grid.ActualHeight == 0)
-                        {
-                            grid.SizeChanged += Grid_SizeChanged;
-                            setOnInit = definitions.First();
-                            return;
-                        }
-                        else
-                        {
-                            setOnInit = string.Empty;
-                            grid.SizeChanged -= Grid_SizeChanged;
-                        }
-
-                        foreach (var child in grid.Children)
-                            grid.RowDefinitions.Add(new RowDefinition()
-                            {
-                                Height = (GridLength)converter.ConvertFromString(definitions.First())
-                            });
-                    }
 
                     var rowDefinitions = definitions.Select(row => new RowDefinition()
                     {
@@ -103,37 +80,6 @@ namespace GridExtension
                     foreach (var def in rowDefinitions)
                         grid.RowDefinitions.Add(def);
                 }
-            }
-        }
-
-        private static void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (sender is Grid grid)
-            {
-                grid.LayoutUpdated += Grid_LayoutUpdated;
-                grid.RowDefinitions.Clear();
-
-                var converter = new GridLengthConverter();
-                foreach (var child in grid.Children)
-                    grid.RowDefinitions.Add(new RowDefinition()
-                    {
-                        Height = (GridLength)converter.ConvertFromString(setOnInit)
-                    });
-            }
-        }
-
-        private static void Grid_LayoutUpdated(object sender, EventArgs e)
-        {
-            if (sender is Grid grid)
-            {
-                grid.RowDefinitions.Clear();
-
-                var converter = new GridLengthConverter();
-                foreach (var child in grid.Children)
-                    grid.RowDefinitions.Add(new RowDefinition()
-                    {
-                        Height = (GridLength)converter.ConvertFromString(setOnInit)
-                    });
             }
         }
     }
