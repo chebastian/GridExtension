@@ -10,34 +10,37 @@ namespace GridExtension
 {
     public class GridDef
     {
-        public static string GetRows(DependencyObject obj)
+
+
+        public static string GetRowDefinitions(DependencyObject obj)
         {
-            return (string)obj.GetValue(RowsProperty);
+            return (string)obj.GetValue(RowDefinitionsProperty);
         }
 
-        public static void SetRows(DependencyObject obj, string value)
+        public static void SetRowDefinitions(DependencyObject obj, string value)
         {
-            obj.SetValue(RowsProperty, value);
+            obj.SetValue(RowDefinitionsProperty, value);
         }
 
-        // Using a DependencyProperty as the backing store for Rows.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty RowsProperty =
-            DependencyProperty.RegisterAttached("Rows", typeof(string), typeof(GridDef), new PropertyMetadata("", OnChanged));
+        // Using a DependencyProperty as the backing store for RowDefinitions.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty RowDefinitionsProperty =
+            DependencyProperty.RegisterAttached("RowDefinitions", typeof(string), typeof(GridDef), new PropertyMetadata("",OnChanged));
 
 
-        public static string GetColumns(DependencyObject obj)
+
+        public static string GetColumnDefinitions(DependencyObject obj)
         {
-            return (string)obj.GetValue(ColumnsProperty);
+            return (string)obj.GetValue(ColumnDefinitionsProperty);
         }
 
-        public static void SetColumns(DependencyObject obj, string value)
+        public static void SetColumnDefinitions(DependencyObject obj, string value)
         {
-            obj.SetValue(ColumnsProperty, value);
+            obj.SetValue(ColumnDefinitionsProperty, value);
         }
 
-        // Using a DependencyProperty as the backing store for Columns.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty ColumnsProperty =
-            DependencyProperty.RegisterAttached("Columns", typeof(string), typeof(GridDef), new PropertyMetadata("",OnColChanged));
+        // Using a DependencyProperty as the backing store for ColumnDefinitions.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ColumnDefinitionsProperty =
+            DependencyProperty.RegisterAttached("ColumnDefinitions", typeof(string), typeof(GridDef), new PropertyMetadata("",OnColChanged));
 
         private static void OnColChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
