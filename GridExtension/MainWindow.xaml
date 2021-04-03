@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:GridExtension"
+    xmlns:grid="clr-namespace:GridExt;assembly=GridExtensionLib"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
     Width="800"
@@ -19,9 +19,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid
-        local:GridDef.ColumnDefinitions="*,*,*"
-        local:GridDef.RowDefinitions="*, *, Auto, 100">
+    <Grid grid:GridDef.RowDefinitions="*,2*,*,10">
 
         <Rectangle Fill="HotPink" />
         <TextBlock Text="0" />

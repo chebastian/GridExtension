@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GridExtensionLib\**" />
+    <EmbeddedResource Remove="GridExtensionLib\**" />
+    <None Remove="GridExtensionLib\**" />
+    <Page Remove="GridExtensionLib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GridExtensionLib\GridExtensionLib.csproj" />
+  </ItemGroup>
+
+</Project>
