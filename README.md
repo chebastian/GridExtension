@@ -13,7 +13,7 @@ After:
 
 # Columns:
 Works in the same way, just as you would expect:
-![image](https://user-images.githubusercontent.com/1180191/112761595-478ebf00-8ffc-11eb-9c82-c1694a3afe25.png)  
+![image](https://user-images.githubusercontent.com/1180191/113489297-bfa92900-94c3-11eb-991f-27230f75ba53.png)
 
 # Rows and columns:  
 Works just as well, and just look at that compactness.
