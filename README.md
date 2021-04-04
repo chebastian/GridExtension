@@ -5,9 +5,9 @@ You need GridExtensions, your welcome!
 
 # Rows:
 Create all your rows in a single string attribute, add and remove rows to your hears content using Rows:  
-Before:  
+Vanilla wpf:  
 ![image](https://user-images.githubusercontent.com/1180191/112758972-43a96f80-8ff1-11eb-98e3-a6183eecb99c.png)  
-After:  
+Using GridExtensions:  
 ![image](https://user-images.githubusercontent.com/1180191/113489240-64773680-94c3-11eb-91b9-7cd4f66feb00.png)
 
 
